@@ -45,7 +45,7 @@ create table estudia
 (
 	id_estu varchar(14),
 	cod_insti varchar(10),
-	nombre varchar(40),
+	nombre varchar(70),
 	nivel varchar(30),
 	metodo varchar(30),
 	primary key (id_estu,cod_insti),
