@@ -37,10 +37,10 @@ create table institucion
 create table estudiante
 (
 	id varchar(14),
-	pais_residencia varchar(20),
+	pais_residencia varchar(50),
 	fecha_nacimiento date,
 	tipo_documento varchar(5),
-	nacionalidad varchar(20),
+	nacionalidad varchar(50),
 	genero varchar(1),
 	beca varchar(2),
 	credito varchar(2),
@@ -90,5 +90,3 @@ create table prueba
 	foreign key (id_estu) references estudiante(id),
 	foreign key (id_mun_desarrollo) references municipio(id)
 );
-
-
