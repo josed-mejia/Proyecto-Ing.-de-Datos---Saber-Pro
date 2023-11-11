@@ -14,19 +14,10 @@ create table municipio
 	foreign key (id_dept) references departamento(id)
 );
 
-create table colegio
-(
-	id varchar(12),
-	nombre varchar(100),
-	id_mun_loc varchar(10),
-	primary key (id),
-	foreign key (id_mun_loc) references municipio(id)
-);
-
 create table institucion
 (
 	codigo varchar(10),
-	nombre varchar(50),
+	nombre varchar(100),
 	caracter_academico varchar(40),
 	origen varchar(40),
 	id_mun_pres varchar(10),
@@ -47,15 +38,14 @@ create table estudiante
 	id_mun_res varchar(10),
 	id_colegio varchar(12),
 	primary key (id),
-	foreign key (id_mun_res) references municipio(id),
-	foreign key (id_colegio) references colegio(id)
+	foreign key (id_mun_res) references municipio(id)
 ); 
 
 create table estudia
 (
 	id_estu varchar(14),
 	cod_insti varchar(10),
-	nombre varchar(40),
+	nombre varchar(70),
 	nivel varchar(30),
 	metodo varchar(30),
 	primary key (id_estu,cod_insti),
@@ -92,4 +82,3 @@ create table prueba
 	foreign key (id_estu) references estudiante(id),
 	foreign key (id_mun_desarrollo) references municipio(id)
 );
-
