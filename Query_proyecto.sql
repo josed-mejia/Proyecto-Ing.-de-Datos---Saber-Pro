@@ -17,7 +17,7 @@ create table municipio
 create table colegio
 (
 	id varchar(12),
-	nombre varchar(50),
+	nombre varchar(100),
 	id_mun_loc varchar(10),
 	primary key (id),
 	foreign key (id_mun_loc) references municipio(id)
@@ -45,9 +45,11 @@ create table estudiante
 	beca varchar(2),
 	credito varchar(2),
 	id_mun_res varchar(10),
+	id_colegio varchar(12),
 	primary key (id),
-	foreign key (id_mun_res) references municipio(id)
-);
+	foreign key (id_mun_res) references municipio(id),
+	foreign key (id_colegio) references colegio(id)
+); 
 
 create table estudia
 (
@@ -90,3 +92,4 @@ create table prueba
 	foreign key (id_estu) references estudiante(id),
 	foreign key (id_mun_desarrollo) references municipio(id)
 );
+
