@@ -76,7 +76,7 @@ create table prueba
 	punt_lectura_critica numeric(3,0),
 	punt_ingles numeric(3,0),
 	punt_competencias_ciudadanas numeric(3,0),
-	desem_ingles varchar(2),
+	desem_ingles varchar(10),
 	desem_comunicacion_escrita numeric(1,0),
 	primary key (id_estu),
 	foreign key (id_estu) references estudiante(id),
