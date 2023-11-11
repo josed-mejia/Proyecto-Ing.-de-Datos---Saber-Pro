@@ -17,7 +17,7 @@ create table municipio
 create table institucion
 (
 	codigo varchar(10),
-	nombre varchar(50),
+	nombre varchar(100),
 	caracter_academico varchar(40),
 	origen varchar(40),
 	id_mun_pres varchar(10),
