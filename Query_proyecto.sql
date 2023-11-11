@@ -70,7 +70,6 @@ create table familia
 create table prueba
 (
 	id_estu varchar(14),
-	id_mun_desarrollo varchar(10),
 	punt_razonamiento_cuantitativo numeric(3,0),
 	punt_comunicacion_escrita numeric(3,0),
 	punt_lectura_critica numeric(3,0),
@@ -79,6 +78,6 @@ create table prueba
 	desem_ingles varchar(10),
 	desem_comunicacion_escrita numeric(1,0),
 	primary key (id_estu),
-	foreign key (id_estu) references estudiante(id),
-	foreign key (id_mun_desarrollo) references municipio(id)
+	foreign key (id_estu) references estudiante(id)
 );
+
