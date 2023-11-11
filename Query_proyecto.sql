@@ -17,7 +17,7 @@ create table municipio
 create table institucion
 (
 	codigo varchar(10),
-	nombre varchar(100),
+	nombre varchar(50),
 	caracter_academico varchar(40),
 	origen varchar(40),
 	id_mun_pres varchar(10),
@@ -45,7 +45,7 @@ create table estudia
 (
 	id_estu varchar(14),
 	cod_insti varchar(10),
-	nombre varchar(70),
+	nombre varchar(40),
 	nivel varchar(30),
 	metodo varchar(30),
 	primary key (id_estu,cod_insti),
@@ -70,14 +70,15 @@ create table familia
 create table prueba
 (
 	id_estu varchar(14),
+	id_mun_desarrollo varchar(10),
 	punt_razonamiento_cuantitativo numeric(3,0),
 	punt_comunicacion_escrita numeric(3,0),
 	punt_lectura_critica numeric(3,0),
 	punt_ingles numeric(3,0),
 	punt_competencias_ciudadanas numeric(3,0),
-	desem_ingles varchar(10),
+	desem_ingles varchar(2),
 	desem_comunicacion_escrita numeric(1,0),
 	primary key (id_estu),
-	foreign key (id_estu) references estudiante(id)
+	foreign key (id_estu) references estudiante(id),
+	foreign key (id_mun_desarrollo) references municipio(id)
 );
-
